@@ -1,0 +1,23 @@
+.bodyBg{
+    background-color: #d9dee4;
+}
+
+.cardBg{
+    border:solid 2px #5b6c7e;
+    background-color: #ffffff51;
+    transition: all 0.3s ease;
+}
+
+.cardBg:hover{
+    background-color: #ffffff;
+    transform: translateY(-5px);
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 15px rgba(88, 101, 149, 0.3);
+}
+/* go back to top btn styling and scrolling behavior control */
+#toTop{
+    width: 50px;
+}
+html{
+    scroll-behavior: smooth;
+}

@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+/* font used for logo */
+.montserrat{
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bolder;
+  font-style: normal;
+}
+/* font used for Hero line */
+.anton-regular {
+  font-family: "Anton", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    scroll-behavior: smooth!important;
+}
+header{
+    background: #ffffff;
+    justify-items: center!important;
+}
+.menu a{
+    position: relative;
+    padding: 2px 7px!important;
+    font-weight: 600;
+    z-index: 1;
+}
+.menu a:hover{
+    color: #fec007!important;
+}
+.menu a::after{
+    content: '';
+    background:linear-gradient(to right ,  #ffffff00 , #00000029, #ffffff21);
+    border:solid 1px #000000;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 1%;
+    height: 0;
+    transition: .3s ease-in;
+}
+.menu a:hover::after{
+    height: 100%;
+}
+
+.hero{
+    transform: translateY(50px);
+    opacity: 0;
+    font-family: "Anton",sans-serif;
+    animation: slideUp 2s  .3s 1 forwards ;
+}
+.heroPara1{
+    transform: translateY(50px);
+    opacity: 0;
+    font-weight: 600;
+    animation: slideUp 2s  1s 1 forwards ;
+}
+.heroPara2{
+    transform: translateY(50px);
+    opacity: 0;
+    font-weight: 600;
+    animation: slideUp 2s  2s 1 forwards ;
+}
+
+/* animation */
+@keyframes slideUp {
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+#home, #home .row{
+    min-height: calc(100vh - 70px);
+    overflow: hidden;
+}
+
+#homeLeft{
+    background:linear-gradient(to bottom ,  #fff ,#ffdd333b , #fff);
+}
+#homeRight{
+    background-size: cover; 
+    background-position: center;
+    filter: blur(.5px);
+    transition: background-image 2s ease-in-out!important;
+}
+
+.card{
+    padding: 2px ;
+    position: relative; 
+    overflow: hidden;   
+    flex: 0 0 auto;
+    width: 200px;
+    box-shadow: 2px 2px 7px #00000000 ,
+                -2px -2px 7px #00000000 ;
+    transition: .5s ease;
+}
+.card:hover{
+    box-shadow: 2px 2px 7px #00000032 ,
+                -2px -2px 7px #00000032 ;
+}
+.genre{
+    position: absolute;
+    background:#49b961bc;
+    color: white;
+    top: 20px;
+    left: 0;
+    padding: 4px 10px ;
+    border-radius: 0 6px 6px 0;
+    font-size: 12px;
+    font-weight: 600;
+}
+.card-img-top{
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+.addToCart{
+    position: absolute; 
+    /* background:linear-gradient(to right ,  #fec007b1 , #fff , #fec007b1); */
+    background: #ffffffcb;
+    bottom: 30%;
+    width: 100%;
+    left: 0;
+    padding: 4px!important;
+    opacity: 0;
+    transition: .3s ease;
+}
+.card:hover .addToCart{
+    opacity: 100%;
+}
+.content{
+    flex: 1;
+}
+.info{
+    margin: 0;
+}
+.title{
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.3;
+    margin: 8px 0px 4px ;
+    color: #222;
+}
+.sec-title{
+    position: relative;
+    display: inline-block;
+    margin: 0 auto;
+    font-family: "Anton",sans-serif;
+    letter-spacing: 1px;
+}
+.sec-title::after{
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    width: 70%;
+    height: 4px;
+    background: linear-gradient(to right, #fec007 ,transparent);
+    border-radius: 999px;
+}
+.section-light{
+    background: linear-gradient(to bottom , #ffffff , #f8f9fa );
+}
+.section-tint{
+    background: linear-gradient(135deg , #fff , #fff8e1);
+}
+.section-clean{
+    background: #ffffff;
+}
+.author{
+    font-size: 12.5px;
+    font-weight: 400;
+    color: #6c757d;
+}
+.price{
+    border:1px solid #49b961e8 ;
+    padding: 4px 8px;
+    font-weight: 600;
+    font-size: 13px;
+}
+#booksec{
+    display: flex;
+    gap: 12px;
+    overflow-x:auto;
+    padding: 10px;
+    scrollbar-width: none;
+ }
+ #mycategory{
+    display: flex;
+    gap: 12px;
+    overflow-x:auto;
+    padding: 10px;
+    scrollbar-width: none;
+ }
+ .socials a{
+    color: #fff;
+    display: inline-block;
+ }
+ .socials a i{
+    transition: 1s ease;
+ }
+.socials a:hover i{
+    color: #fec007;
+}
+#navLinks a{
+    padding: 2px 4px ;
+    color:white;
+    text-decoration: none;
+    position: relative;
+}
+#navLinks a::after{
+    position: absolute;
+    content:'';
+    /* background: rgba(255, 255, 255, 0.297); */
+    background:linear-gradient(to top , #ffffff5b , #ffffff0f);
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    transition: .4s ease;
+}
+#navLinks a:hover{
+    color: #fec007;
+}
+#navLinks a:hover::after{
+   height: 25px;
+}
+#cat-pills {
+    display: flex;
+    justify-content: flex-start;
+    gap: 8px;
+    overflow-x:auto;
+    scrollbar-width: none;
+    padding-bottom: 5px;
+}
+#cat-pills button{
+    flex-shrink: 0;
+}
+/* for  pills alignment in small screens Vs centeralize on larger */
+@media (min-width:900px){
+    #cat-pills{
+        justify-content:center
+    }
+}
+/* roulette */
+#roulette-card{
+    max-width: 700px;
+    border: 1px solid #fec007 ;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 10px 20px lightgray;
+    border-radius:20px;
+    text-align: center;
+}
+.roulette-badge{
+    background: #00800015;
+    padding: 5px 10px;
+    color: green;
+    font-family: sans-serif;
+    font-size: 13px;
+}
+.roulette-title{
+    margin:15px auto ;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.book-title{
+    display: block;
+    font-size: 25px;
+    font-weight: 700;
+    margin: 25px auto;
+    color: #222;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.book-title::before{
+    content: '{ ';
+    color: #2222222d;
+}
+.book-title::after{
+    content: ' }';
+    color: #2222222d;
+}
+.book-author{
+    display: block;
+    margin-bottom: 25px;
+    color: #22222290;
+    font-family: 'Montserrat,Arial, Helvetica, sans-serif;
+}
+.book-author::before{
+    content: 'By: ';
+}
+.roulette-btn{
+    transition: .5s ease;
+}
+.roulette-btn:hover{
+    box-shadow: 0 10px 10px rgba(0, 128, 0, 0.226);
+}
+.roulette-btn:active{
+    transform:scale(0.97);
+}
+/* ------------- */
+#x{
+    min-height: 330px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
